@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewGoalScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".activity.ViewSpecificGoalActivity">
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/viewRelabelJournal"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:onClick="relabelJournal"
+        android:src="@drawable/ic_label_black_24dp"
+        app:cb_color="#D81B60"
+        app:cb_pressedRingWidth="12dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/viewRevalueJournal"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:onClick="revalueJournal"
+        android:src="@drawable/ic_autorenew_black_24dp"
+        app:cb_color="#D81B60"
+        app:cb_pressedRingWidth="12dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/startGoal"
+        android:layout_width="128dp"
+        android:layout_height="47dp"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="startGoal"
+        android:text="Start Goal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Here Is Your Goal"
+        android:textColor="@color/colorSecondaryDark"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="389dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView">
+
+        <!--        Sleep Time-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sleepTimeCardView"
+            android:layout_width="325dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@drawable/bg1">
+
+                <TextView
+                    android:id="@+id/sleepTimeTextView"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Sleep Time"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView8"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--        Days for goal-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/daysCardView"
+            android:layout_width="325dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@drawable/bg1">
+
+                <TextView
+                    android:id="@+id/daysTextView"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Days for Goal"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--        Days Completed-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/daysCompletedCardView"
+            android:layout_width="325dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@drawable/bg1">
+
+                <TextView
+                    android:id="@+id/daysCompletedTextView"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Days Completed"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--        Insects Caught-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/totalHoursCardView"
+            android:layout_width="325dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@drawable/bg1">
+
+                <TextView
+                    android:id="@+id/totalHoursTextView"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Total Hours Recorded"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--        Date created-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dateCreatedCardView"
+            android:layout_width="325dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@drawable/bg1">
+
+                <TextView
+                    android:id="@+id/dateCreatedTextView"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Date Created"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--        Completed-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/completedCardView"
+            android:layout_width="325dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@drawable/bg1">
+
+                <TextView
+                    android:id="@+id/completedTextView"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Completed"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dimLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".45"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/loadingBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="238dp"
+            android:layout_height="252dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
